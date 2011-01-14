@@ -1,0 +1,125 @@
+
+HTML {
+    overflow-y: hidden;
+}
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, default;
+	background-color: #333;
+	color: white;
+	text-shadow: rgb(0,0,0) 1px 1px 5px;
+}
+
+h1 {
+	font-family: 'Arial';
+	font-size: 100px;	
+}
+
+h2 {
+	font-family: 'Arial';
+	font-size: 72px;	
+	color: white;
+}
+
+h3 {
+	font-family: 'Arial';
+	font-size: 24px;	
+	color: white;
+}
+
+q {
+    font-style: italic;
+    font-size: 30px;    
+}
+em {
+	font-style: italic;
+	color: #F9006E;
+}
+
+strong {
+	font-weight: bold;
+}
+
+code {
+	color: #89BDFF;
+	font-size: 22px;
+	font-family: 'Courier New';
+}
+
+pre code {
+	background-color: #333;
+	font-size: 22px;
+	font-family: 'Courier New';
+}
+
+a,
+a:active,
+a:hover,
+a:visited {
+	text-decoration: none;
+	font-weight: normal;
+	color: #FF7F00;
+	cursor: pointer;
+}
+
+a[draggable="true"] {
+	-webkit-user-drag: element;
+	-webkit-user-select: none;
+}
+
+table {
+	font-size: 22px;
+	margin: 20px 40px 20px 100px;
+	width: 90%
+}
+
+th {
+	color: #FF7F00;
+}
+
+/* display */
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.hidden {
+	display: none;
+}
+
+
+/* slides */
+.slide {
+    margin: 0 auto;
+}
+
+.slide {
+	width: 1024px;
+	min-width: 1024px;
+	height: 768px;
+	min-height: 768px;
+	display: block;
+	font-size: 36px;	
+	overflow: hidden;
+}
+
+.slide header {
+	padding-top: 40px;
+	padding-bottom: 20px;
+	text-align: center;
+	display: block;
+}
+
+.content {
+	padding-left: 40px;
+	line-height: 1.5;
+}
+
+.slide li {
+	margin-left: 100px;
+	list-style: disc;
+	font-size: 26px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Title</title>
+        
+        <meta name="description" content="A tiny presentation template." />
+        
+        <link rel="stylesheet" href="css/reset-min.css" />
+        <link rel="stylesheet" href="highlight/sunburst.css">
+        <link rel="stylesheet" href="css/colorful.css" />
+    </head>
+    <body>
+    
+        <div id="slides">
+            <section class="slide">
+                <header>
+                    <h1>Title</h1>
+                    <h3>subtitle</h3>
+                </header>
+                <section class="content">
+                    <p>Content<br/>
+                    press space for next slide
+                    </p>
+                </section>
+            </section>            
+            
+            <section class="slide">
+                <header>
+                    <h1>Action</h1>
+                </header>
+                <section class="content">
+                    <p>Press space</p>
+                    <div class="action hidden">
+                        <p><pre><code>
+puts "Hello world"
+                        </code></pre></p>
+                    </div>
+                </section>
+            </section>
+        </div>
+        
+        <script src="js/jquery-1.4.3.min.js"></script>
+		<script src="highlight/highlight.pack.js"></script>
+		<script src="js/navigation.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.slide:first').addClass('active');
+                $("html,body").animate({scrollTop: 0}, 1500);
+                
+                hljs.initHighlightingOnLoad();
+                
+                $('html').bind('keydown', function() {
+                    switch(event.keyCode) {
+                        case 32: /* space bar */
+                        case 39: /* right arrow */	
+                        case 40: /* down arrow */
+                            nextSlide();
+                            break;
+                        case  8: /* backspace */
+                        case 37: /* left arrow */
+                        case 38: /* up arrow */
+                            previousSlide();
+                            break;
+                    }
+                });
+            });
+		</script>
+    </body>
+</html>
